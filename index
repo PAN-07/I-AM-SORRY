@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>I Owe You An Apology rehet my love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts"></div>
+
+
+    <!-- ========================= -->
+    <!-- LANDING PAGE -->
+    <!-- ========================= -->
+
+    <section id="home" class="screen active">
+
+        <div class="home-content">
+
+            <div class="heart">❤️</div>
+
+            <p class="small-text">There is something I need to say...</p>
+
+            <h1>
+                I OWE YOU<br>
+                AN APOLOGY
+            </h1>
+
+            <p class="intro">
+                I made a mistake.<br>
+                And I owe you more than just a "sorry".
+            </p>
+
+            <button id="explainBtn" class="main-button">
+                Let me explain...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- APOLOGY SECTION -->
+    <!-- ========================= -->
+
+    <section id="apology" class="screen">
+
+        <div class="apology-container">
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span id="cardNumber">1</span> / 6
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Card -->
+            <div id="card" class="apology-card">
+
+                <div class="card-heart">
+                    ❤️
+                </div>
+
+                <p id="cardLabel" class="card-label">
+                    WHAT I DID
+                </p>
+
+                <h2 id="cardTitle">
+                    I lied to you.
+                </h2>
+
+                <p id="cardText">
+                    There isn't a better way for me to put it.
+                    I wasn't honest with you, and I know that hurt you.
+                </p>
+
+                <button id="nextBtn" class="next-button">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- FINAL MESSAGE -->
+    <!-- ========================= -->
+
+    <section id="final" class="screen">
+
+        <div class="final-content">
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+            <p class="small-text">
+                Before anything else...
+            </p>
+
+            <h1>
+                I KNOW SORRY<br>
+                ISN'T ENOUGH.
+            </h1>
+
+            <p class="final-message">
+                I don't expect one website, one message,
+                or one apology to fix everything.
+                <br><br>
+                I just want you to know that I understand
+                what I did, and I understand why it hurt you.
+                <br><br>
+                I can't change what happened.
+                But I can choose what I do from here.
+            </p>
+
+            <div class="signature">
+                I'm sorry. ❤️
+            </div>
+
+            <button id="restartBtn" class="main-button">
+                Read it again
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
