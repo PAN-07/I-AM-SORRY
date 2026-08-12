@@ -1,0 +1,540 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #0b0710;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* ========================= */
+/* SCREEN */
+/* ========================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+.screen::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(190, 50, 100, 0.12);
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    top: 10%;
+    left: 10%;
+
+    pointer-events: none;
+}
+
+.screen::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    background: rgba(100, 50, 180, 0.1);
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    bottom: 5%;
+    right: 10%;
+
+    pointer-events: none;
+}
+
+
+/* ========================= */
+/* HOME */
+/* ========================= */
+
+.home-content {
+    text-align: center;
+
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: fadeIn 1.5s ease;
+}
+
+.heart {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 2s infinite;
+}
+
+.small-text {
+    color: #c7b7c9;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(55px, 9vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.intro {
+    color: #d8ccd9;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.main-button,
+.next-button {
+    border: none;
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #b93668,
+        #7b315f
+    );
+
+    box-shadow: 0 10px 30px rgba(185, 54, 104, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.main-button:hover,
+.next-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(185, 54, 104, 0.4);
+}
+
+
+/* ========================= */
+/* APOLOGY */
+/* ========================= */
+
+.apology-container {
+    width: 100%;
+
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ========================= */
+/* PROGRESS */
+/* ========================= */
+
+.progress-container {
+    margin-bottom: 30px;
+}
+
+.progress-text {
+    text-align: right;
+
+    color: #a99baa;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 3px;
+
+    background: #2c2230;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+
+    width: 16.66%;
+
+    background: #d85a87;
+
+    transition: width 0.5s ease;
+}
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.apology-card {
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 25px;
+
+    padding: 60px 50px;
+
+    text-align: center;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+
+    min-height: 430px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.card-heart {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.card-label {
+    color: #d85a87;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.apology-card h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+
+    margin-bottom: 25px;
+}
+
+.apology-card p {
+    color: #cfc3d0;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    max-width: 540px;
+
+    margin-bottom: 35px;
+}
+
+.next-button {
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: none;
+}
+
+.next-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow: none;
+}
+
+
+/* ========================= */
+/* CARD ANIMATION */
+/* ========================= */
+
+.card-exit {
+    animation: cardExit 0.4s ease forwards;
+}
+
+.card-enter {
+    animation: cardEnter 0.5s ease forwards;
+}
+
+@keyframes cardExit {
+
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes cardEnter {
+
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================= */
+/* FINAL */
+/* ========================= */
+
+.final-content {
+    max-width: 700px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: fadeIn 1.5s ease;
+}
+
+.big-heart {
+    font-size: 60px;
+
+    margin-bottom: 25px;
+
+    animation: heartbeat 2s infinite;
+}
+
+.final-content h1 {
+    font-size: clamp(50px, 8vw, 85px);
+}
+
+.final-message {
+    color: #d5c9d5;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin: 20px auto 35px;
+
+    max-width: 600px;
+}
+
+.signature {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 36px;
+
+    font-style: italic;
+
+    margin-bottom: 35px;
+
+    color: #e6a2ba;
+}
+
+
+/* ========================= */
+/* HEART ANIMATION */
+/* ========================= */
+
+.hearts {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 15px;
+
+    opacity: 0;
+
+    animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    90% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ========================= */
+/* GENERAL ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 20px;
+    }
+
+    .apology-card {
+        padding: 45px 25px;
+
+        min-height: 450px;
+    }
+
+    .apology-card h2 {
+        font-size: 40px;
+    }
+
+    .apology-card p {
+        font-size: 15px;
+    }
+
+    h1 {
+        letter-spacing: 1px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .heart,
+    .big-heart {
+        font-size: 45px;
+    }
+}
